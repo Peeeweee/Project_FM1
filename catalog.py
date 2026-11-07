@@ -31,6 +31,11 @@ SEEDS.extend([
  dict(id='araminta',name='Araminta',repo='Wulgaren/Araminta',category='Groovebox',description='A Felucca-based groovebox with free takes, wavetable sounds and punch-in effects.',installer='https://wulgaren.github.io/Araminta/',version='3.7',assets=[]),
  dict(id='moondaw',name='Moondaw',repo='jaeggerr/moondaw-fm1',category='Groovebox',description='An eight-track tracker with editable instruments and text-based songs.',installer='https://moondaw.com/install/',version='See maintainer',assets=[]),
  dict(id='mutable-dreams',name='Mutable Dreams',repo='kidbee85-beep/mutable-dreams',category='Generative',description='Six assignable tracks, evolving Biomes, granular effects and open synthesis engines.',installer='https://mutable-dreams.sugarypixie10.chatgpt.site',version='1.4',assets=[]),
+ dict(id='x0x',name='X0X',repo='charlesvestal/fm1-x0x',category='Groovebox',description='A drum and bass groovebox inspired by the 909, 808 and two 303s.',installer='https://github.com/charlesvestal/fm1-x0x',version='Check releases',assets=[]),
+ dict(id='melodee',name='Melodee',repo='keremimo/melodee',category='Groovebox',description='A multi-engine instrument with tracks, presets, a web editor and full project backup.',installer='https://github.com/keremimo/melodee',version='Check releases',assets=[]),
+ dict(id='optimist',name='Optimist',repo='w0ts/optimist',category='Groovebox',description='A modular FM1 firmware with browser building, simulation and installation.',installer='https://w0ts.github.io/optimist/',version='Check releases',assets=[]),
+ dict(id='fmini',name='Fmini-1',repo='ruppert/fmini-1',category='Synth',description='A Minimoog-inspired synthesizer for the FM1.',installer='https://ruppert.github.io/fmini-1/',version='Check releases',assets=[]),
+ dict(id='saadet',name='Saadet',repo='keremimo/saadet',category='Synth',description='An experimental single-part synthesizer with Bluetooth MIDI and native 24-bit audio.',installer='https://github.com/keremimo/saadet',version='Check releases',assets=[]),
 ])
 
 _downloads=json.loads((Path(__file__).parent/'catalog-downloads.json').read_text(encoding='utf-8'))
