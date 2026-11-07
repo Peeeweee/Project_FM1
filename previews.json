@@ -1,0 +1,113 @@
+{
+  "sloop": {
+    "image": "/previews/sloop.png",
+    "source": "https://raw.githubusercontent.com/isod89/sloop-fm1/91f30182d9095e0ecdb43396554f2ce5a67df179/assets/screens/live-tracks.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided firmware screen preview. May show an earlier version.",
+    "sha256": "94227ed2a419c5cb043bcb857da6212f06872914f697402ca52a2b5515b804a8"
+  },
+  "felucca": {
+    "image": "/previews/felucca.png",
+    "source": "https://raw.githubusercontent.com/hugelton/Felucca/40762f24282a7a2a6cfa86fe51deb78d3b4cc656/docs/screens.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided firmware screen preview. May show an earlier version.",
+    "sha256": "38ab2666770d90f9e161ee60bb226ab010e826ee739c44bf985c9ca608440304"
+  },
+  "amb1": {
+    "image": "/previews/amb1.png",
+    "source": "https://raw.githubusercontent.com/charlesvestal/fm1-amb/62a588ab102b5f1cf5e4aa72553694eaa7ddaaa5/docs/img/screen-garden.png",
+    "license": "MPL-2.0",
+    "caption": "Maintainer-provided firmware screen preview. May show an earlier version.",
+    "sha256": "baf9036f3abb6629a60652a10fc51cdd3ccc543af19ec08e227c12a60d61f387"
+  },
+  "aisling": {
+    "image": "/previews/aisling.png",
+    "source": "https://raw.githubusercontent.com/stephencummins/fm1-aisling/6ce129ddf7c56ef081989ceba18b2770ef0b43d4/docs/img/screen-main.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided firmware screen preview. May show an earlier version.",
+    "sha256": "16143bbb868ff4dda404c2258b1670f97da237cf26e5bdcbd89a545d1c9594a5"
+  },
+  "orbit": {
+    "image": "/previews/orbit.png",
+    "source": "https://raw.githubusercontent.com/dspaudio/orbit/055a44d8e771940aedbabf0c64a061fc7caf173c/docs/orbit-demo-0.3.png",
+    "license": "GPL-3.0-only",
+    "caption": "Earlier ORBIT UI rendered by the native host harness; not a photograph or a v0.10 capture.",
+    "sha256": "1f789142ad38a4c30c0ed3eedd540f4fc586a26fa41800b82535693b73b62804"
+  },
+  "open": {
+    "image": "/previews/open.jpg",
+    "source": "https://open.m-vave.com/fm1-workbench",
+    "license": "GPL-3.0-only WITH GPL-3.0-linking-exception",
+    "caption": "Actual maintainer browser simulator display captured 4 November 2026. Not a photograph of the connected device.",
+    "sha256": "fa4dba8beaf78c89f99dd1d66c4b1eee14c6c046da9383e332c5ef57aaf2e176"
+  },
+  "ambwave": {
+    "image": "/previews/ambwave.jpg",
+    "source": "https://mentalcells.github.io/ambwave/try/",
+    "license": "GPL-3.0-only",
+    "caption": "Actual maintainer browser simulator display captured 4 November 2026. Not a photograph of the connected device.",
+    "sha256": "2817733d01c0809c3b7b52a914488510fac4b862c74b8bfcfcc9b7d5e0f57f7f"
+  },
+  "386dx": {
+    "image": "/previews/386dx.jpg",
+    "source": "https://386dx.linecross.ing/emu/index.html",
+    "license": "GPL-3.0-only",
+    "caption": "Actual maintainer browser simulator display captured 4 November 2026. Not a photograph of the connected device.",
+    "sha256": "340a6e04f4f4d12700675ff7abdda3df4b23cbb155fbef7dfac3d4ea7d824d70"
+  },
+  "stock": {
+    "image": "/previews/stock.jpeg",
+    "source": "/previews/stock.jpeg",
+    "license": "User-provided photo \u00b7 local use",
+    "caption": "Your original photograph of the factory FM1 global settings screen (V15 session), before SLOOP was installed. This is a hardware photo, not a live display.",
+    "sha256": "c6b4d751db7d8bf5e9e53daba425c67c9d060b38e0eafc3024bb309e5dc410a9"
+  },
+  "clipper": {
+    "image": "/previews/clipper.png",
+    "source": "https://raw.githubusercontent.com/isod89/clipper-fm1/7bc15a950a8b3fd51aec280514905448e4faaf1b/assets/logo/clipper-splash.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer artwork; not a live screen capture.",
+    "kind": "artwork",
+    "sha256": "ef85afe354a990389b687d29bf726a4dd93512e1cd36ae09a2514f7288e354b6"
+  },
+  "skiff": {
+    "image": "/previews/skiff.png",
+    "source": "https://raw.githubusercontent.com/illuminus5/skiff/db2ce89c8cb4260661f86720f607455a0133aa6a/docs/skiff.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided firmware screen montage.",
+    "kind": "screen",
+    "sha256": "87357b2f8aa3b7e4f27c04c8c587ebcf502c8caaddfe5c93aafdc1ee05cabda6"
+  },
+  "coralflower": {
+    "image": "/previews/coralflower.png",
+    "source": "https://raw.githubusercontent.com/FicusFicusov/CoralFlower/272cad9e85a444d879d72598807b7ca01a098d6d/docs/images/home.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided home screen preview.",
+    "kind": "screen",
+    "sha256": "62c65e452799c73a0c95742617c7b3bd35d062fd921ba9959fdf7eb111441fdc"
+  },
+  "araminta": {
+    "image": "/previews/araminta.png",
+    "source": "https://raw.githubusercontent.com/Wulgaren/Araminta/c9a7830ac6ab7f4e49910e65d4012ca9069970dd/docs/araminta.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided Araminta boot screen; not a live controls display.",
+    "kind": "artwork",
+    "sha256": "60d61f701bcb49a8493e7be12d6214e28910bcc3a630237a0120fff090f853cc"
+  },
+  "moondaw": {
+    "image": "/previews/moondaw.png",
+    "source": "https://raw.githubusercontent.com/jaeggerr/moondaw-fm1/1752b5d02e7551f2b44de34187af00f65d21e31e/docs/readme/home.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided home screen preview.",
+    "kind": "screen",
+    "sha256": "56be1239b0d60d1385cdb9ce808c583f5ca671e832a5628d09a13ca0620a5123"
+  },
+  "mutable-dreams": {
+    "image": "/previews/mutable-dreams.png",
+    "source": "https://raw.githubusercontent.com/kidbee85-beep/mutable-dreams/470bf7e9423fd641e12c5bd371faea59415272f0/Screen-1.4-Live-Biome.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided Mutable Dreams 1.4 screen.",
+    "kind": "screen",
+    "sha256": "79a3dbaa866a9c3d5248598ecfc05af96e1e14b57bf7636726c64e837303de1e"
+  }
+}
