@@ -12,7 +12,7 @@ Double-click **Start.cmd** in this folder. Python 3.10+ is required; no npm inst
 
 - **Home:** three direct paths and optional connection help.
 - **Studio:** live USB MIDI notes and activity, editable note takes, saved note projects, MIDI export, audio recording, waveform trim and WAV export.
-- **Firmware:** 20 seed entries and 20 credited local previews; beginner detail views; saved packages; optional GitHub release lookup. Browsing/downloading never flashes the FM1.
+- **Firmware:** 30 seed entries and 30 credited local previews; beginner detail views; saved packages; optional GitHub release lookup. Browsing/downloading never flashes the FM1.
 - **Backups:** original stock .syx copy plus supported V14/V15 sound capture, a handoff to SLOOP's project/sample backup tool, and a verified local recovery package for a matching reviewed firmware version.
 
 ## Minimal layout
@@ -57,7 +57,7 @@ With stock V14/V15 identified, an intact full capture offers Restore A/B/C/D. Af
 
 ## Firmware catalog, downloads and offline installs
 
-The catalog starts with 20 instruments, a search field and category filter. Cards show credited preview images, creator, version and install/save status. Newly added projects include X0X, Melodee, Optimist, Fmini-1 and Saadet. Details show a compact image/action split. The Install here filter selects the three supported firmware families; all four builds are in Saved after caching. **Links & releases → Check releases** fetches the latest numbered GitHub release and offers its `.fwsc` assets. Add another public GitHub `owner/repository` to extend your personal catalog. Entries without numbered releases retain their maintainer link. Rate limits and connection failures leave already cached data usable.
+The catalog starts with 30 instruments, a search field and category filter. Cards show credited preview images, creator, version and install/save status. New projects include FoMni-1, BB1, sloopDX, GHOULBOX, ChoralRoot, Hortator, FiMba-1, zp12, OberVave and Jangada. Details show a compact image/action split. The Install here filter selects the three supported firmware families; all four builds are in Saved after caching. Other projects link to their maintainers' installers when available. **Links & releases → Check releases** fetches the latest numbered GitHub release and offers its `.fwsc` assets. Add another public GitHub `owner/repository` to extend your personal catalog. Entries without numbered releases retain their maintainer link. Rate limits and connection failures leave already cached data usable.
 
 - **Save to laptop** fetches the selected package through the local server, checks any published SHA-256, and stores it in `data/firmwares` with metadata and a recomputed hash. It never sends MIDI.
 - **Save & review install** saves a supported build first, then opens final review. It does not start a write automatically.
