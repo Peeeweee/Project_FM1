@@ -23,7 +23,7 @@ class ReviewedCatalogTests(unittest.TestCase):
         self.assertIsNone(catalog.reviewed_build(raw))
     def test_catalog_has_distinct_fm1_projects_and_all_preview_files(self):
         entries=catalog.load_catalog(Path(tempfile.gettempdir())/'fm1-dock-no-catalog-qa')
-        self.assertEqual(len(entries),20);self.assertEqual(len({e['id'] for e in entries}),20)
+        self.assertEqual(len(entries),30);self.assertEqual(len({e['id'] for e in entries}),30)
         previews=json.loads((Path(catalog.__file__).parent/'previews.json').read_text())
         for entry in entries:
             image=Path(catalog.__file__).parent/'web'/previews[entry['id']]['image'].lstrip('/')
