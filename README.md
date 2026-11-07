@@ -12,8 +12,8 @@ Double-click **Start.cmd** in this folder. Python 3.10+ is required; no npm inst
 
 - **Home:** three direct paths and optional connection help.
 - **Studio:** live USB MIDI notes and activity, editable note takes, saved note projects, MIDI export, audio recording, waveform trim and WAV export.
-- **Firmware:** 15 seed entries; 15 credited local previews; beginner detail views; saved packages; optional GitHub release lookup. Browsing/downloading never flashes the FM1.
-- **Backups:** original stock .syx copy plus supported V14/V15 sound capture, and a clear handoff to SLOOP's own project/sample backup tool.
+- **Firmware:** 20 seed entries and 20 credited local previews; beginner detail views; saved packages; optional GitHub release lookup. Browsing/downloading never flashes the FM1.
+- **Backups:** original stock .syx copy plus supported V14/V15 sound capture, a handoff to SLOOP's project/sample backup tool, and a verified local recovery package for a matching reviewed firmware version.
 
 ## Minimal layout
 
@@ -57,7 +57,7 @@ With stock V14/V15 identified, an intact full capture offers Restore A/B/C/D. Af
 
 ## Firmware catalog, downloads and offline installs
 
-The catalog starts with 15 instruments, a search field and category filter. Cards show preview images, creator, version and install/save status. Details show a compact image/action split. The Install here filter selects the three supported firmware families; all four builds are in Saved after caching. **Links & releases → Check releases** fetches the latest numbered GitHub release and offers its `.fwsc` assets. Add another public GitHub `owner/repository` to extend your personal catalog. Entries without numbered releases retain their maintainer link. Rate limits and connection failures leave already cached data usable.
+The catalog starts with 20 instruments, a search field and category filter. Cards show credited preview images, creator, version and install/save status. Newly added projects include X0X, Melodee, Optimist, Fmini-1 and Saadet. Details show a compact image/action split. The Install here filter selects the three supported firmware families; all four builds are in Saved after caching. **Links & releases → Check releases** fetches the latest numbered GitHub release and offers its `.fwsc` assets. Add another public GitHub `owner/repository` to extend your personal catalog. Entries without numbered releases retain their maintainer link. Rate limits and connection failures leave already cached data usable.
 
 - **Save to laptop** fetches the selected package through the local server, checks any published SHA-256, and stores it in `data/firmwares` with metadata and a recomputed hash. It never sends MIDI.
 - **Save & review install** saves a supported build first, then opens final review. It does not start a write automatically.
@@ -70,6 +70,8 @@ The catalog starts with 15 instruments, a search field and category filter. Card
 Four exact packages have reviewed native installation support: **ORBIT 1.0.0**, **SLOOP 2.8.5**, **SLOOP 2.8.4**, and **Clipper 1.3.1**. Their bytes, sizes, FM-1 product markers, immutable release URLs and recovery links are pinned in `install-builds.json`. They share the documented Felucca-family two-stage M-UPGRADE flow. Unknown builds, factory firmware, SMK-37 variants and other catalog entries use creator tools; matching a filename or product marker never enables installation. Both Python and the browser verify the exact package. Native transfers pass simulations and package validation, **not a physical FM1 flash test**. All reviewed builds currently report FM-1_900, so a matching reboot identity confirms reconnection, not the firmware name/version: the user must check the screen and audio.
 
 Connect and identify the instrument first. The review dialog names the package/device and checksum, describes data loss and recovery, requires the relevant acknowledgements and typing INSTALL, and starts writing only on **Write firmware to FM1**. Cancel/reconnect/capture controls are locked during writing. The adapter uses the upstream two-stage verification/loader/write flow, limits read requests to package bounds, rejects foreign update loaders for resume and before normal stage-two writes, and checks the post-reboot identity. After an interruption it does not automatically retry or claim success. Keep the device connected and follow its recovery documentation.
+
+Before installation, **Back up before installing** opens Backups. **Keep a way back** lets you choose the exact current version from the reviewed package list, save its verified `.fwsc` to the local vault, and download another copy. The app cannot identify the installed version from USB identity alone, so check the FM1 screen. This saves an installable creator package, **not** a dump of the firmware currently in the chip. Factory and other firmware versions require their matching creator package and instructions. Full flash readback requires a separate chip download-mode tool; normal USB MIDI cannot perform it. Save projects, samples and sounds independently with the tool for the installed firmware.
 
 The existing Plan a swap section is a separate handoff to maintainer tools. Your original stock `.syx` backup is kept in `data/legacy-backups`; it is not automatically imported as an fm1 JSON capture. Current SLOOP projects/samples still require SLOOP's own backup facilities. Firmware save formats are not interchangeable.
 
