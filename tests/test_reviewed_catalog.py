@@ -21,12 +21,14 @@ class ReviewedCatalogTests(unittest.TestCase):
         for i,char in enumerate('FM-1_900'):raw[i*48+47]=ord(char)+i+1
         self.assertEqual(catalog.fwsc_info(raw),'FM-1_900')
         self.assertIsNone(catalog.reviewed_build(raw))
-    def test_catalog_has_fifteen_distinct_fm1_projects_and_all_preview_files(self):
+    def test_catalog_has_distinct_fm1_projects_and_all_preview_files(self):
         entries=catalog.load_catalog(Path(tempfile.gettempdir())/'fm1-dock-no-catalog-qa')
-        self.assertEqual(len(entries),15);self.assertEqual(len({e['id'] for e in entries}),15)
+        self.assertEqual(len(entries),20);self.assertEqual(len({e['id'] for e in entries}),20)
         previews=json.loads((Path(catalog.__file__).parent/'previews.json').read_text())
         for entry in entries:
-            self.assertTrue((Path(catalog.__file__).parent/'web'/previews[entry['id']]['image'].lstrip('/')).is_file())
+            image=Path(catalog.__file__).parent/'web'/previews[entry['id']]['image'].lstrip('/')
+            self.assertTrue(image.is_file())
+            self.assertEqual(catalog.hashlib.sha256(image.read_bytes()).hexdigest(),previews[entry['id']]['sha256'])
 
     def test_extended_fm1_version_can_be_stored_but_is_not_install_approved(self):
         raw=bytearray([125]*1100)
