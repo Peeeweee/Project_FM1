@@ -24,6 +24,23 @@ export function initCatalog(ctx){
     [entries,builds]=await Promise.all([ctx.api('/api/catalog'),ctx.api('/api/install-builds')]);
     saved=(await ctx.api('/api/assets')).firmwares;render();
   }
+  function recoveryChoice(){
+    const build=builds.find(b=>b.id===$('recovery-build').value);
+    if(!build)return null;
+    const entry=entries.find(e=>e.id===build.firmwareId);
+    const asset=entry?.assets?.find(a=>a.buildId===build.id);
+    return entry&&asset?{build,entry,asset,item:stored(asset)}:null;
+  }
+  function renderRecovery(){
+    const select=$('recovery-build'),previous=select.value;
+    select.replaceChildren(new Option('Choose the matching version',''));
+    for(const build of builds)select.add(new Option(build.label,build.id));
+    select.value=builds.some(b=>b.id===previous)?previous:'';
+    const choice=recoveryChoice();
+    $('recovery-save').disabled=working||!choice||!!choice.item;
+    $('recovery-download').disabled=working||!choice?.item;
+    $('recovery-status').textContent=!choice?'The app cannot identify the installed version from USB. Check the FM1 screen.':choice.item?`${choice.build.label} is saved and verified on this laptop. Download a second copy before installing something else.`:`${choice.build.label} can be saved here. This is a copy of the creator’s package, not a readback of the FM1’s flash.`;
+  }
   async function refresh(entry){
     working=true;render();
     try{await ctx.api('/api/catalog/refresh',{id:entry.id});await reload();ctx.notice('Release list updated.');}
@@ -173,6 +190,7 @@ export function initCatalog(ctx){
       $('detail-content').querySelectorAll('button,select').forEach(control=>control.disabled=working);
       updateDetail?.();
     }
+    renderRecovery();
     updateFinal();
   }
   function collection(view){
@@ -184,6 +202,19 @@ export function initCatalog(ctx){
     $(id).onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?'browse':e.key==='End'?'saved':view==='saved'?'browse':'saved';collection(next);$(next==='saved'?'saved-tab':'browse-tab').focus();}};
   }
   collection('browse');$('catalog-search').oninput=render;$('catalog-category').onchange=render;$('catalog-installable').onchange=render;
+  $('recovery-build').onchange=renderRecovery;
+  $('recovery-save').onclick=()=>ctx.run(async()=>{
+    const choice=recoveryChoice();if(!choice)throw Error('Choose the exact firmware shown on the FM1 screen.');
+    await cache(choice.entry,choice.asset);
+  });
+  $('recovery-download').onclick=()=>ctx.run(async()=>{
+    const choice=recoveryChoice();if(!choice?.item)throw Error('Save a verified recovery file first.');
+    const bytes=await getBytes(choice.item),url=URL.createObjectURL(new Blob([bytes],{type:'application/octet-stream'}));
+    const a=el('a');a.href=url;a.download=choice.build.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
+  });
+  const backupLink=action('Back up before installing →',async()=>{$('install-dialog').close();location.hash='#backup';});
+  backupLink.id='install-open-backup';
+  $('install-backup').closest('label').before(backupLink);
   $('catalog-add').onsubmit=e=>{e.preventDefault();ctx.run(async()=>{await ctx.api('/api/catalog/add',{repo:$('catalog-repo').value});$('catalog-repo').value='';await reload();});};
   $('install-close').onclick=()=>$('install-dialog').close();$('install-dialog').addEventListener('cancel',e=>{if(working)e.preventDefault();});
   $('install-words').oninput=updateFinal;for(const id of ['install-backup','install-recovery','install-power'])$(id).onchange=updateFinal;
