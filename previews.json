@@ -109,5 +109,45 @@
     "caption": "Maintainer-provided Mutable Dreams 1.4 screen.",
     "kind": "screen",
     "sha256": "79a3dbaa866a9c3d5248598ecfc05af96e1e14b57bf7636726c64e837303de1e"
+  },
+  "x0x": {
+    "image": "/previews/x0x.png",
+    "source": "https://raw.githubusercontent.com/charlesvestal/fm1-x0x/ab4aa06c82450900e0fb6c2c8c3b279af9bf9fae/docs/img/new/1.0-home.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided X0X home screen. May show an earlier release.",
+    "kind": "screen",
+    "sha256": "e9cc6e4bae9482d5de77438638d71dde88c1fc8ecf0fbd1522e97f3870f8979b"
+  },
+  "melodee": {
+    "image": "/previews/melodee.png",
+    "source": "https://raw.githubusercontent.com/keremimo/melodee/165d177a425944f3d30b0b669255a6ed0050c3a5/docs/design/baseline/stage_drum.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer design comparison for Melodee’s drum screen; this is not a live device capture.",
+    "kind": "artwork",
+    "sha256": "19d27ddaaaf916a22106946e78b71f5d4d4786eab9e9f1b8df2b1040312ac08f"
+  },
+  "optimist": {
+    "image": "/previews/optimist.webp",
+    "source": "https://raw.githubusercontent.com/w0ts/optimist/8a91efd6b7725b86df3f35576aa3169664ed1589/assets/screens/device-master.webp",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided Optimist screen preview.",
+    "kind": "screen",
+    "sha256": "a5ffef216749d0aa0cd710c7b67c39694b6797e4f0133fa18d88c2f3aa9363e0"
+  },
+  "fmini": {
+    "image": "/previews/fmini.png",
+    "source": "https://raw.githubusercontent.com/ruppert/fmini-1/7619d903fa732286f3912a378f29bf71b8057a0c/assets/readme/screen-osc.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided Fmini-1 oscillator screen.",
+    "kind": "screen",
+    "sha256": "7c50b65e5fafb70414c26da739369e933ea76199cf36c09371776f58ea896cb7"
+  },
+  "saadet": {
+    "image": "/previews/saadet.png",
+    "source": "https://raw.githubusercontent.com/keremimo/saadet/db4d186b164191290a08caa1c17cc4b65c9d97af/assets/readme/introducing-saadet.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided Saadet artwork; not an FM1 screen capture.",
+    "kind": "artwork",
+    "sha256": "6fb020e43b652c0a94afdbceb0ec784bd095c02d29f634c7815a1ed1d01e4f6c"
   }
 }
