@@ -1,0 +1,37 @@
+{
+  "repo": "charlesvestal/fm1-base",
+  "commit": "3c4a57eea659f942b0c80a99949dddafc094a57b",
+  "license": "MPL-2.0",
+  "files": [
+    {
+      "path": "template/app.c",
+      "sha256": "5e53fe18e75af1e1dd309bb4ea5023c3c7bce10999d38f15b371259fd97a57d7",
+      "url": "https://raw.githubusercontent.com/charlesvestal/fm1-base/3c4a57eea659f942b0c80a99949dddafc094a57b/template/app.c"
+    },
+    {
+      "path": "template/app.h",
+      "sha256": "0fd1d1d2c26082d598db607688a5b756da266271bec1bc7c871bbd3ccc4a2b5c",
+      "url": "https://raw.githubusercontent.com/charlesvestal/fm1-base/3c4a57eea659f942b0c80a99949dddafc094a57b/template/app.h"
+    },
+    {
+      "path": "template/fm1.toml",
+      "sha256": "92b794bcf94bcac9ca224765f88a2ec2accd4ab5f949ff1c133be752414ceba7",
+      "url": "https://raw.githubusercontent.com/charlesvestal/fm1-base/3c4a57eea659f942b0c80a99949dddafc094a57b/template/fm1.toml"
+    },
+    {
+      "path": "template/words.tsv",
+      "sha256": "b6e45b6442bd855f16cf169329ab66d5ccf2555bcc33e901227b6d292de5d4a6",
+      "url": "https://raw.githubusercontent.com/charlesvestal/fm1-base/3c4a57eea659f942b0c80a99949dddafc094a57b/template/words.tsv"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "url": "https://raw.githubusercontent.com/charlesvestal/fm1-base/3c4a57eea659f942b0c80a99949dddafc094a57b/LICENSE"
+    },
+    {
+      "path": "CREDITS.md",
+      "sha256": "416d38756f2a9808635968927ee32abb8a5e20be44f0ed0e6b4c4c9b1e94253e",
+      "url": "https://raw.githubusercontent.com/charlesvestal/fm1-base/3c4a57eea659f942b0c80a99949dddafc094a57b/CREDITS.md"
+    }
+  ]
+}
