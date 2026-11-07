@@ -58,7 +58,7 @@
   "stock": {
     "image": "/previews/stock.jpeg",
     "source": "/previews/stock.jpeg",
-    "license": "User-provided photo \u00b7 local use",
+    "license": "User-provided photo · local use",
     "caption": "Your original photograph of the factory FM1 global settings screen (V15 session), before SLOOP was installed. This is a hardware photo, not a live display.",
     "sha256": "c6b4d751db7d8bf5e9e53daba425c67c9d060b38e0eafc3024bb309e5dc410a9"
   },
@@ -149,5 +149,85 @@
     "caption": "Maintainer-provided Saadet artwork; not an FM1 screen capture.",
     "kind": "artwork",
     "sha256": "6fb020e43b652c0a94afdbceb0ec784bd095c02d29f634c7815a1ed1d01e4f6c"
+  },
+  "fomni": {
+    "image": "/previews/fomni.png",
+    "source": "https://raw.githubusercontent.com/charlesvestal/fm1-fomni/9581e1b57ea0ac8a972c46f41caa898f5d232328/docs/img/screen-strum.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided FoMni strum screen.",
+    "kind": "screen",
+    "sha256": "bda46f05f66eae686340447f8c1bdf400862f7e63d8e0747d4358957a393eca3"
+  },
+  "bb1": {
+    "image": "/previews/bb1.png",
+    "source": "https://raw.githubusercontent.com/TexasRADIO/bb1-firmware/a2c04a19604024a83b142e954cf2392eed4f142e/docs/media/bb1-social.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer promotional artwork with an FM1 screen rendering; not a device photograph.",
+    "kind": "artwork",
+    "sha256": "d3bbb6ae673131a010a00d41786e7ef7a10c3841b9d5715fc0496656ba8fb36d"
+  },
+  "dxsloop": {
+    "image": "/previews/dxsloop.png",
+    "source": "https://raw.githubusercontent.com/zvenson/dxsloop/8c1035b79d860edcb6f23556910206332669dac8/assets/screens/sloopdx-screens.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided sloopDX screen montage.",
+    "kind": "screen",
+    "sha256": "23833a57e66f014d5fa1fe2a0f5dd8c7bcdb05175086a734a1dea45c6ad0aa24"
+  },
+  "ghoulbox": {
+    "image": "/previews/ghoulbox.png",
+    "source": "https://raw.githubusercontent.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/9f2b9a22e456d7fe9552b40f7a1d0c13200913bb/docs/ghoulbox-1.0.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided GHOULBOX 1.0 screen montage; may show an earlier version.",
+    "kind": "screen",
+    "sha256": "b3a22b2d200261de6417b2187dd24b17417840c7aaacfe93478e6c1bc9dcf66b"
+  },
+  "choralroot": {
+    "image": "/previews/choralroot.png",
+    "source": "https://raw.githubusercontent.com/Quixotic7/ChoralRootFM1/a9422d7402c085054dbaec0793730934c324fa7c/web/site/img/screen-chord.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided ChoralRoot chord screen.",
+    "kind": "screen",
+    "sha256": "3a500a6030cfdd9d2d5ac9a710c9bb16a82304c4e830899922d92b36f979bd1d"
+  },
+  "hortator": {
+    "image": "/previews/hortator.png",
+    "source": "https://raw.githubusercontent.com/DeadActive/hortator/44c9ad4aa57bebf63f412bd552e57143c30b4065/docs/superpowers/specs/2026-10-19-md-ui/home.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer interface design mockup; not a live FM1 screen capture.",
+    "kind": "artwork",
+    "sha256": "83d98ff9ac1c5685ae699a7bd84f314481bb0b331b018d566d70eed8f5514b09"
+  },
+  "fimba": {
+    "image": "/previews/fimba.png",
+    "source": "https://raw.githubusercontent.com/jadamsowers/fm1-fimba/0485ed0d387ce78216428c7b19f97d77bbe10b4d/docs/img/perform.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided FiMba-1 performance screen.",
+    "kind": "screen",
+    "sha256": "b9566fd540cb29dc4b03dd0df14ad122cf10496b096337022af9fd716b1a385a"
+  },
+  "zp12": {
+    "image": "/previews/zp12.png",
+    "source": "https://raw.githubusercontent.com/zvenson/zp12/7b8b97586ef87854d1859aad907e5f10ca49898d/web/img/home.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided zp12 home screen.",
+    "kind": "screen",
+    "sha256": "e56f6749a081f00f7965f69f272b946548df2f769d5d9d3cf3314055c01e69e8"
+  },
+  "obervave": {
+    "image": "/previews/obervave.png",
+    "source": "https://raw.githubusercontent.com/zvenson/obervave/099ccd6f30a83591cea3521efaec6d3546004036/docs/screen.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided OberVave screen.",
+    "kind": "screen",
+    "sha256": "df11dc7ddb728485e4c34359ee8160de1117f931b019a91507caf42f13caecdb"
+  },
+  "jangada": {
+    "image": "/previews/jangada.png",
+    "source": "https://raw.githubusercontent.com/zednaked/jangada/b546675f965b15704b0d9f56c38401c777d98048/docs/screens.png",
+    "license": "GPL-3.0-only",
+    "caption": "Maintainer-provided Jangada screen montage.",
+    "kind": "screen",
+    "sha256": "2249cc380273e8a6f5012dc47565cad6701276570d61ee8989fba1c4e4b34bfb"
   }
 }
