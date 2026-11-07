@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">FM1</title>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#171717"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#fff" stroke-width="3"/>
+  <path d="M18 43h28" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 36V28m7 8V20m7 16V25m7 11V23" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+</svg>
