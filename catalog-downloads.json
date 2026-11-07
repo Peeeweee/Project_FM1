@@ -1,0 +1,29 @@
+{
+  "skiff": [
+    {
+      "name": "skiff-2.2.fwsc",
+      "url": "https://github.com/illuminus5/skiff/releases/download/v2.2/skiff-2.2.fwsc",
+      "sha256": "4412ecae63f69f5d288a6d78029272d3685488c4ad3e3be7cd484403429fc3d9",
+      "size": 610429,
+      "adapter": null
+    }
+  ],
+  "coralflower": [
+    {
+      "name": "coralflower-0.6.1.fwsc",
+      "url": "https://github.com/FicusFicusov/CoralFlower/releases/download/v0.6.1/coralflower-0.6.1.fwsc",
+      "sha256": "de41c96a0979927d921a99064aca1b43cb871a5ab10736342abf22cab2845a22",
+      "size": 610313,
+      "adapter": null
+    }
+  ],
+  "mutable-dreams": [
+    {
+      "name": "Mutable-Dreams-1.4.0.fwsc",
+      "url": "https://github.com/kidbee85-beep/mutable-dreams/releases/download/v1.4/Mutable-Dreams-1.4.0.fwsc",
+      "sha256": "d6682e1433f581285333f23629be20b96a595707776c6359d22d14e6542d6bda",
+      "size": 610136,
+      "adapter": null
+    }
+  ]
+}
