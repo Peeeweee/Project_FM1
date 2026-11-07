@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {pack,unpack,frame,decode,identity,readReply,readCommand,bankSysex,singleSysex,validateCapture} from '../web/protocol.mjs';
+test('documented identity query matches known wire bytes',()=>assert.deepEqual(frame(17),[240,0,50,69,0,0,0,64,127,247]));
+test('packing preserves arbitrary bytes across boundaries',()=>{for(let n=0;n<300;n++){const v=Array.from({length:n},(_,i)=>(i*73+255)&255);assert.deepEqual(unpack(pack(v)),v);}});
+test('rejects damaged frames and non-seven-bit MIDI bytes',()=>{const f=frame(17);f[2]^=1;assert.equal(decode(f),null);assert.equal(decode([240,255,247]),null);});
+test('identifies stock firmware and rejects wrong identity shape',()=>{const body=Array(27).fill(0);body.splice(0,8,...Array.from('FM-1_015',c=>c.charCodeAt(0)));assert.equal(identity(frame(17,body)).version,15);assert.equal(identity(frame(17,[1])),null);});
+test('current read cannot accept an unrelated or truncated reply',()=>{const v=Array(155).fill(0);const body=[5,0,0,0,0,155,0,0,...v];assert.deepEqual(readReply(frame(35,body)),v);assert.equal(readReply(frame(17,body)),null);body[0]=6;assert.equal(readReply(frame(35,body)),null);assert.equal(decode(readCommand()).type,35);});
+test('bank export has Yamaha header, exact length and checksum',()=>{const v=Array(155).fill(0);v.splice(145,10,...Array.from('TEST VOICE',c=>c.charCodeAt(0)));const bank=bankSysex(Array(32).fill(v));assert.equal(bank.length,4104);assert.deepEqual(bank.slice(0,6),[240,67,0,9,32,0]);assert.equal(bank.slice(6,-1).reduce((a,b)=>a+b,0)%128,0);assert.equal(bank.at(-1),247);assert.deepEqual(bank.slice(124,134),v.slice(145));});
+test('capture validation prevents fake full backups and bad voices',()=>{const c={schema:'fm1-dock/1',scope:'current-sound',device:{model:'FM-1',version:15},voices:[Array(155).fill(0)]};assert.equal(validateCapture(c),c);assert.throws(()=>validateCapture({...c,scope:'saved-sounds'}));assert.throws(()=>singleSysex(Array(155).fill(255)));assert.throws(()=>validateCapture({...c,device:{model:'FM-1',version:99}}));});
